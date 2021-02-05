@@ -40,13 +40,8 @@
   line-height: 24px;
   letter-spacing: 0.08em;
   color: var(--main-color);
-  margin-top: 21px;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   border-bottom: 1px solid var(--grey-color);
-  
-    @media screen and (min-width: 768px) {
-    margin-top: 112px;
-    }
       
     @media screen and (min-width: 1344px)  {
     font-size: 30px;
@@ -97,7 +92,7 @@
   }
   
   .teacher-education {
-  padding-top: 18px;
+  margin-top: 18px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
@@ -122,8 +117,6 @@
   line-height: 20px;
   text-decoration-line: underline;
   color: var(--orange-color);
-  padding-top: 10px;
-  padding-bottom: 50px;
   
     
     @media screen and (min-width: 1344px) {
@@ -131,15 +124,17 @@
     font-size: 18px;
     line-height: 28px;
     margin-top: 30px;
-    padding-bottom: 137px;
     }
   }
   
   .teacher-right {
+    margin-top: 39px;
+
     @media screen and (min-width: 768px) {
     flex-direction: column;
     width: 243px;
     margin-right: 41px;
+    margin-top: 0;
     }
     @media screen and (min-width: 1344px) {
     width: 530px;
@@ -147,7 +142,15 @@
     }
   }
     .teacher-left {
+      margin-top: 21px;
+
       @media screen and (min-width: 768px) {
       flex-direction: column;
+
+      margin-top: 60px;
+    }
+
+    @media screen and (min-width: 1344px) {
+      margin-top: 110px;
     }
   }
