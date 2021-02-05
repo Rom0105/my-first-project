@@ -31,7 +31,7 @@
         left: 79px;
         top: 82px;
         width: 1px;
-        height: 1282px;
+        height: 1245px;
         background-color: var(--white-color);
     }
 }
@@ -174,7 +174,7 @@
             left: 88px;
             top: 97px;
             width: 1px;
-            height: 705px;
+            height: 690px;
         }
     }
 
@@ -247,9 +247,9 @@
         margin-left: 0;
 
         &::before{
-          left: 0;
-          top: 140px;
-          width: 1684px;
+          left: -50%;
+          top: 138px;
+          width: 4600px;
           height: 1px;
       }
     }
@@ -327,7 +327,6 @@ li {
     width: 280px;
     padding: 20px 22px;
     background-color: var(--white-color);
-    //margin-bottom: 90px;
     box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
     height: 638px;
     margin-bottom: 39px;
