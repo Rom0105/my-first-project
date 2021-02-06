@@ -28,6 +28,10 @@
 
 .logo-light-theme {
   display: block;
+
+  @media screen and (min-width: 1344px) {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {

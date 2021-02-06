@@ -24,10 +24,8 @@
 @media screen and (min-width: 768px) {
   .advantages-list {
     display: flex;
-    // justify-content: space-between;
   }
   .advantages-list-item {
-    // justify-content: flex-start;
     &:not(:last-child) {
       margin-bottom: 0;
       margin-right: 21px;
