@@ -108,10 +108,18 @@
     color: var(--orange-color);
     border: 2px solid #ff6b09;
     box-sizing: border-box;
+    transition-property: transform;
+    transition-duration: 1500ms;
   }
+
   .reverse {
     display: flex;
   }
+}
+
+.button-call-menu:hover {
+    transform: scale(1.2);
+    transition-duration: 1500ms;
 }
 
 @media screen and (min-width: 768px) {
@@ -140,12 +148,21 @@
     color: var(--orange-color);
     border: 2px solid #ff6b09;
     box-sizing: border-box;
+
+    transition-property: transform;
+    transition-duration: 1500ms;
   }
+
   .menu {
     margin-left: 40px;
   }
   .button-call-menu {
     display: none;
+  }
+
+  .button-call:hover {
+      transform: scale(1.2);
+      transition-duration: 1500ms;
   }
 }
 @media screen and (max-width: 1343px) {

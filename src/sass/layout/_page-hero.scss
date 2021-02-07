@@ -69,6 +69,9 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
 
+    transition-property: transform;
+    transition-duration: 1500ms;
+
     color: var(--white-color);
     background-color: var(--orange-color);
     box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
@@ -80,6 +83,11 @@
         justify-content: center;
         margin-bottom: 30px; 
     }
+}
+
+.hero-btn-wrapper .hero-btn:hover {
+    transform: scale(1.2);
+    transition-duration: 1500ms;
 }
 
 .hero-bg{

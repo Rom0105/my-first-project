@@ -203,6 +203,9 @@
       background-color: var(--orange-color);
       color: var(--white-color);
 
+      transition-property: transform;
+      transition-duration: 1500ms;
+
       @media screen and (min-width: 768px) {
         display: block;
 
@@ -219,6 +222,11 @@
         line-height: 1.214;
         letter-spacing: 0.14em;
       }
+    }
+
+    & .footer-button:hover {
+      transform: scale(1.2);
+      transition-duration: 1500ms;
     }
 }
 
@@ -293,6 +301,9 @@
 
       color: var(--main-color);
 
+      transition-property: transform;
+      transition-duration: 1500ms;
+
       @media screen and (min-width: 768px) {
         font-size: 20px;
         line-height: 1.2;
@@ -317,6 +328,11 @@
         }
       }
     }
+
+        & .footer-tel:hover {
+          transform: scale(1.2);
+          transition-duration: 1500ms;
+        }
   
     & .footer-insta {
       margin-top: 31px;
