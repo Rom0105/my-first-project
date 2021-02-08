@@ -1,9 +1,4 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
 
-// Стили для файла с примером HTML-фрагмента
 @import './utils/variables';
 @import './utils/visually-hidden';
 
@@ -20,5 +15,6 @@
 @import './layout/teacher';
 @import './layout/we-promise';
 @import './layout/feedbacks';
+@import './layout/back-to-top';
 
 @import './components/backdrop';
