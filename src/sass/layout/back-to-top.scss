@@ -10,12 +10,13 @@
     border-color: transparent;
     border-radius: 50%;
     background-color: var(--orange-color);
+    opacity: 0.7;
 
     display: none;
 }
 
 .back-top:hover {
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .back-top::before,
