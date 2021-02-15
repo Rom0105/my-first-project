@@ -214,10 +214,21 @@
     bottom: 0;
     left: 0;
 
+    font-size: 0;
+
     z-index: 10;
+
+    background-image: url(../images/arrowrith.svg);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 15px;
+    background-color: transparent;
+
+    border: transparent;
     
     @media screen and (min-width: 768px){
       bottom: 50%;
+      left: -7%;
    }
   }
   .slick-next {
@@ -225,10 +236,21 @@
     bottom: 0;
     right: 0;
 
+    font-size: 0;
+
     z-index: 10;
+
+    background-image: url(../images/arrowleft.svg);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 15px;
+    background-color: transparent;
+
+    border: transparent;
 
     @media screen and (min-width: 768px){
      bottom: 50%;
+     right: -7%;
    }
   }
   
