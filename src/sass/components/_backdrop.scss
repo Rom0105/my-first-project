@@ -1,130 +1,132 @@
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-    z-index: 3;
-  
-    background-color: rgba(0, 0, 0, 0.2);
-  
-    opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 3;
 
-    &.is-hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
   }
-  
-  .modal {
-    height: 609px;
-    padding: 40px;
-  
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  
-    background-color: var(--white-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  height: 480px;
+  padding: 40px;
+
+  overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1344px) {
+    width: 528px;
+    height: 581px;
+  }
+}
+
+.button {
+  width: 30px;
+  height: 30px;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+
+  background-color: var(--white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: var(--orange-color);
+  }
+}
+
+.modal-text {
+  margin-bottom: 12px;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1.13;
+  letter-spacing: 0.03em;
+
+  color: var(--main-color);
+
+  @media screen and (max-width: 1343px) {
+    text-align: center;
+  }
+}
+
+.modal-label {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+
+  & input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
-    @media screen and (min-width: 768px) {
-      width: 450px;
-    }
-
-    @media screen and (min-width: 1344px) {
-      width: 528px;
-      height: 581px;
-    }
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
   }
-  
-  .button {
-    width: 30px;
-    height: 30px;
-  
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    border-radius: 50%;
-  
-    background-color: var(--white-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover,
-    &:focus {
-       fill: var(--orange-color);
-     }
-  }
-  
-  .modal-text {
-    margin-bottom: 12px;
-  
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 1.13;
-    letter-spacing: 0.03em;
-  
-    color: var(--main-color);
+  & textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
 
-    @media screen and (max-width: 1343px) {
-      text-align: center;
-    }
-  }
-  
-  .modal-label {
-    display: flex;
-    flex-direction: column;
-   
     font-size: 12px;
     line-height: 1.166;
     letter-spacing: 0.01em;
 
-    & input {
-      border: 1px solid rgba(33, 33, 33, 0.2);
-      border-radius: 4px;
-    
-      width: 100%;
-      height: 40px;
-      padding-left: 42px;
-    }
-
-    & textarea {
-      width: 100%;
-      height: 120px;
-      padding: 12px 16px;
-    
-      font-size: 12px;
-      line-height: 1.166;
-      letter-spacing: 0.01em;
-    
-      border: 1px solid rgba(33, 33, 33, 0.2);
-      border-radius: 4px;
-      resize: none;
-    }
-
-    & .form-textarea::placeholder {
-      color: rgba(117, 117, 117, 0.5);
-    }
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
   }
-  
-  .label-margin {
-    margin-top: 10px;
-  }
-  
-  .modal-form {
-    position: relative;
-    margin-top: 4px;
-  }
-  
-  .modal-checkbox {
-    margin-top: 25px;
 
-   & .modal-policy {
+  & .form-textarea::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.label-margin {
+  margin-top: 10px;
+}
+
+.modal-form {
+  position: relative;
+  margin-top: 4px;
+}
+
+.modal-checkbox {
+  margin-top: 25px;
+  text-align: center;
+  & .modal-policy {
     font-size: 10px;
     line-height: 1.166;
     letter-spacing: 0.03em;
@@ -134,84 +136,88 @@
       line-height: 1.714;
       padding-left: 12px;
     }
-   }
   }
-  
-  .modal-svg {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-  
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+    text-align: start;
   }
-  
-  .modal-policy{
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      vertical-align: text-top;
-      margin-right: 7px;
-    
-      border: 2px solid var(--main-color);
-      border-radius: 2px;
-    
-      transition: background-image, background-color, border-color, 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-      .modal-checkbox-policy:checked + & {
-        background-image: url(../images/gala.svg);
-        background-color: var(--orange-color);
-        background-repeat: no-repeat;
-        border-color: var(--orange-color);
-      }
-    }
-  }
-  
-  .modal-link {
-    color: var(--orange-color);
-  
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-  }
-  
-  .modal-button {
-    display: block;
-    margin: 0 auto;
-    margin-top: 30px;
-    padding: 10px 55px;
-    border-radius: 4px;
-    border: none;
-      
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
+.modal-svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
 
-    transition-property: transform;
-    transition-duration: 1500ms;
-      
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    background-color: var(--orange-color);
-    color: var(--white-color);
-  }
-  
-  .form-margin {
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    &:hover + .modal-svg,
-    &:focus + .modal-svg {
-      fill: var(--orange-color);
-    } 
+.modal-policy {
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: text-top;
+    margin-right: 7px;
 
-    &:hover,
-    &:focus {
+    border: 2px solid var(--main-color);
+    border-radius: 2px;
+
+    transition: background-image, background-color, border-color,
+      250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal-checkbox-policy:checked + & {
+      background-image: url(../images/gala.svg);
+      background-color: var(--orange-color);
+      background-repeat: no-repeat;
       border-color: var(--orange-color);
-      outline: none;
     }
   }
+}
 
-  .modal-button:hover {
-    transform: scale(1.2);
-    transition-duration: 1500ms;
+.modal-link {
+  color: var(--orange-color);
+
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.modal-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 10px 55px;
+  border-radius: 4px;
+  border: none;
+
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  transition-property: transform;
+  transition-duration: 1500ms;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--orange-color);
+  color: var(--white-color);
+}
+
+.form-margin {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover + .modal-svg,
+  &:focus + .modal-svg {
+    fill: var(--orange-color);
   }
+
+  &:hover,
+  &:focus {
+    border-color: var(--orange-color);
+    outline: none;
+  }
+}
+
+.modal-button:hover {
+  transform: scale(1.2);
+  transition-duration: 1500ms;
+}
